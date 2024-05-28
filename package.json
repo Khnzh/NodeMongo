@@ -1,0 +1,25 @@
+{
+  "name": "nodemongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "customer_app.js",
+  "scripts": {
+    "dev": "nodemon customer_app.js",
+    "start": "node customer_app.js"
+  },
+  "author": "Khnzh",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.2",
+    "nodemon": "^3.1.0",
+    "s": "^1.0.0",
+    "winston": "^3.13.0"
+  }
+}

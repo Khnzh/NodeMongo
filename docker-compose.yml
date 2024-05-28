@@ -1,0 +1,27 @@
+version: "2.3.3"
+services:
+  mongo:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - .data:/data/db
+    ports:
+      - 27015:27017
+
+  node:
+    build: .
+    ports:
+      - 4000:3000
+    volumes:
+      - $HOME/nodemongo:/usr/src/app
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo:27017
+      DB_NAME: customerDB
+      NAME: TrullyMittal
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_db: {}
